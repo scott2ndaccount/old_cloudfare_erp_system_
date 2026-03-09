@@ -1,5 +1,8 @@
 export async function GET() {
-  return Response.json({
-    status: "route working"
-  });
+  return new Response(
+    JSON.stringify({ status: "API working" }),
+    {
+      headers: { "Content-Type": "application/json" }
+    }
+  )
 }
