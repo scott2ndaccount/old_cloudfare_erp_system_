@@ -1,16 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router"
+import { createClient } from '@supabase/supabase-js'
 
-export const Route = createFileRoute("/api/supabase")({
-  server: {
-    handlers: {
-      GET: async () => {
-        return new Response(
-          JSON.stringify({ status: "API working" }),
-          {
-            headers: { "Content-Type": "application/json" }
-          }
-        )
-      }
-    }
-  }
-})
+export function getSupabaseClient(env: { SUPABASE_URL: string; SUPABASE_KEY: string }) {
+  return createClient(env.SUPABASE_URL, env.SUPABASE_KEY)
+}
