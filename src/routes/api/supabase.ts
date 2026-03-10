@@ -1,15 +1,16 @@
-export async function GET({ context }) {
-  const response = await fetch(
-    `${context.env.SUPABASE_URL}/rest/v1/`,
-    {
-      headers: {
-        apikey: context.env.SUPABASE_KEY,
-        Authorization: `Bearer ${context.env.SUPABASE_KEY}`
+import { createFileRoute } from "@tanstack/react-router"
+
+export const Route = createFileRoute("/api/supabase")({
+  server: {
+    handlers: {
+      GET: async () => {
+        return new Response(
+          JSON.stringify({ status: "API working" }),
+          {
+            headers: { "Content-Type": "application/json" }
+          }
+        )
       }
     }
-  )
-
-  const data = await response.json()
-
-  return Response.json(data)
-}
+  }
+})
