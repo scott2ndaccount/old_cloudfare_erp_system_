@@ -29,6 +29,12 @@
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
+	 *
+	 * Supabase credentials are stored as secrets (not vars) for security.
+	 * Set them with:
+	 *   npx wrangler secret put SUPABASE_URL
+	 *   npx wrangler secret put SUPABASE_KEY
+	 * For local dev, add them to .dev.vars (see .dev.vars.example).
 	 */
 	// "vars": {  "MY_VARIABLE": "production_value" }
 	/**
