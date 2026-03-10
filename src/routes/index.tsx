@@ -10,6 +10,24 @@ import {
 
 export const Route = createFileRoute('/')({ component: App })
 
+export default function Home() {
+  return (
+    <div>
+      <h1>ERP Accounting System</h1>
+
+      <p>
+        Manage invoices, vendors, payments, and financial records in one
+        centralized cloud platform.
+      </p>
+
+      <Link to="/new-invoice">
+        <button>Create Invoice</button>
+      </Link>
+
+    </div>
+  )
+}
+
 function App() {
   const features = [
     {
