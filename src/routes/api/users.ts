@@ -1,6 +1,6 @@
 
 import { createFileRoute } from "@tanstack/react-router"
-import { getSupabaseClient } from "../../lib/supabase"
+import { getSupabaseClient } from './supabase'
 
 export const Route = createFileRoute("/api/users")({
   server: {
