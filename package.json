@@ -6,13 +6,12 @@
 		"#/*": "./src/*"
 	},
 	"scripts": {
-		"dev": "vite dev --port 3000",
-		"build": "vite build",
-		"preview": "npm run build && vite preview",
-		"test": "vitest run",
-		"deploy": "npm run build && wrangler deploy",
-		"cf-typegen": "wrangler types"
-	},
+  "dev": "vite",
+  "build": "vinxi build",
+  "start": "vinxi start",
+  "deploy": "npm run build && wrangler deploy",
+  "cf-typegen": "wrangler types"
+},
 	"dependencies": {
 		"@cloudflare/vite-plugin": "^1.13.8",
 		"@supabase/supabase-js": "^2.99.0",
