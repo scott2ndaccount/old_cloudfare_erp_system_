@@ -1,14 +1,18 @@
 {
-  "name": "erp-accounting-system",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "echo \"No build step required for this Worker\"",
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "cf-typegen": "wrangler types"
-  },
-  "devDependencies": {
-    "wrangler": "^4.0.0"
-  }
+  "projectName": "it426-erp",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "npm",
+  "git": false,
+  "install": true,
+  "addOnOptions": {},
+  "includeExamples": true,
+  "envVarValues": {},
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "cloudflare"
+  ]
 }
